@@ -26,11 +26,11 @@ public class Doador {
     private Documento documento;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="fk_itensDoacao")
-    @JsonManagedReference
+    // @JsonManagedReference
     private List<ItensDoacao> ItensDoacao;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name="associacao_doador_instituicao", joinColumns=@JoinColumn(name="fk_doador"), inverseJoinColumns = @JoinColumn(name = "fk_instituicao"))
-    @JsonManagedReference
+    // @JsonManagedReference
     private List<Instituicao> instituicoes;
 
 

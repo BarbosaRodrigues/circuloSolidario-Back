@@ -15,7 +15,7 @@ public class Documento {
     private Long id;
     private String tipo, numero;
     @JsonBackReference
-    @OneToOne(mappedBy ="doador")
+    @OneToOne(mappedBy ="documento")
     private Doador doador;
 
     public Documento(){}
